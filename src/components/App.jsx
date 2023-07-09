@@ -1,18 +1,13 @@
 import React from "react";
-import Login from "./Login";
+import Form from "./Form";
 
-var isLogedIn= false;
-
-const currentTime = new Date().getHours();
-
-console.log(currentTime);
+var userIsRegistered= true;
 
 
 
 function App() {
     return <div className="container">{
-        //isLogedIn ? <h1>Hello</h1>  : <Login/>
-        currentTime > 12 && <h1>Why are you still working</h1>
+        <Form isRegistered={userIsRegistered} />
     }</div>;
 }
 
